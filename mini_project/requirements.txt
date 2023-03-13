@@ -1,0 +1,10 @@
+librosa
+matplotlib
+streamlit
+plotly
+torch
+torchlibrosa
+seaborn
+tensorflow
+pickle
+PIL
