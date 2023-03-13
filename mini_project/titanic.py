@@ -17,10 +17,14 @@ import streamlit as st
 import streamlit.components.v1 as components
 from PIL import Image
 import pickle
+import requests
+from io import BytesIO
 
 
 st.title('PREDICT YOUR SURVIVAL ON THE TITANIC')
-img = Image.open('https://raw.githubusercontent.com/philip11997/streamlit-examples/ff154571291c6529da262244d65a451f95fe4f57/mini_project/titanic.jpg')
+url = 'https://raw.githubusercontent.com/philip11997/streamlit-examples/ff154571291c6529da262244d65a451f95fe4f57/mini_project/titanic.jpg'
+response = requests.get(url)
+img = Image.open(BytesIO(response.content))
 st.image(img,width=600, channels='RGB',caption=None)
 
 df = pd.read_csv('https://raw.githubusercontent.com/philip11997/streamlit-examples/main/mini_project/titanic.csv')
