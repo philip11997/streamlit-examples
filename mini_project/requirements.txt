@@ -6,5 +6,4 @@ torch
 torchlibrosa
 seaborn
 tensorflow
-pickle
 PIL
