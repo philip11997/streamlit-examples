@@ -20,10 +20,10 @@ import pickle
 
 
 st.title('PREDICT YOUR SURVIVAL ON THE TITANIC')
-img = Image.open('C:/Users/Philip/streamlit-examples/mini_project/titanic.jpg')
+img = Image.open('titanic.jpg')
 st.image(img,width=600, channels='RGB',caption=None)
 
-df = pd.read_csv('C:/Users/Philip/streamlit-examples/mini_project/titanic.csv')
+df = pd.read_csv('titanic.csv')
 #drop the name columns
 df = df.drop(columns='Name')
 #encode the sec column
